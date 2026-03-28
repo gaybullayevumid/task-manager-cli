@@ -7,6 +7,12 @@ from db.task_repository import (
 from models.task import Task
 
 
+# 1. no invalid input handling
+#   - trimming
+#   - empty values
+#   - type checking
+# 2. no error handling
+
 def create_task(title):
     add_task(title)
     print("Task qo‘shildi!")

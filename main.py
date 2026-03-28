@@ -14,6 +14,7 @@ def main():
     parser = create_parser()
     args = parser.parse_args()
 
+    # suggestion: convert to match-case or dictionary-based dispatch, it makes code more readble
     if args.command == "add":
         create_task(args.title)
 

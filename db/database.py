@@ -3,6 +3,9 @@ import sqlite3
 DB_NAME = "tasks.db"
 
 
+# 1. recommended to use context managers `with` for resource clean up
+# 2. no error handling
+
 def get_connection():
     return sqlite3.connect(DB_NAME)
 

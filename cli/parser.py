@@ -1,5 +1,7 @@
 import argparse
 
+# 1. no input validation
+# 2. no help messages for commands (suggestion)
 
 def create_parser():
     parser = argparse.ArgumentParser()
