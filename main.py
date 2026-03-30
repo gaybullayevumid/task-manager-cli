@@ -14,22 +14,17 @@ def main():
     parser = create_parser()
     args = parser.parse_args()
 
-    # suggestion: convert to match-case or dictionary-based dispatch, it makes code more readble
-    if args.command == "add":
-        create_task(args.title)
-
-    elif args.command == "list":
-        list_tasks()
-
-    elif args.command == "done":
-        complete_task(args.id)
-
-    elif args.command == "delete":
-        remove_task(args.id)
-
-    else:
-        print("Noto‘g‘ri command")
-
+    match args.command:
+        case 'add':
+            create_task(args.title)
+        case 'list':
+            list_tasks()
+        case 'done':
+            complete_task(args.id)
+        case 'delete':
+            remove_task(args.id)
+        case _:
+            print("Noto'g'ri command")
 
 if __name__ == "__main__":
     main()
